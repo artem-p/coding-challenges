@@ -1,4 +1,4 @@
-package loops
+package main.java.loops
 
 import java.util.*
 

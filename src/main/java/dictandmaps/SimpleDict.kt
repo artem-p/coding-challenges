@@ -1,4 +1,4 @@
-package dictandmaps
+package main.java.dictandmaps
 
 import java.util.*
 
