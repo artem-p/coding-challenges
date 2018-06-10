@@ -2,10 +2,10 @@ import java.util.*
 
 
 fun factorial(n: Int): Int {
-    return if (n == 1) {
-        1
+    return if (n > 1) {
+        n * factorial(n - 1)
     } else {
-        n + factorial(n - 1)
+        1
     }
 }
 
