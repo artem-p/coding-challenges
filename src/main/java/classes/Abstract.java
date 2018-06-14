@@ -1,7 +1,11 @@
-package src.main.java.classes;
+package main.java.classes;
 
 import java.util.Scanner;
 
+
+/**
+ * https://www.hackerrank.com/challenges/30-abstract-classes/problem
+ * */
 public class Abstract {
     abstract class Book {
         String title;
@@ -15,26 +19,37 @@ public class Abstract {
         abstract void display();
     }
 
-    // Declare your class here. Do not use the 'public' access modifier.
-    // Declare the price instance variable
 
-    /**
-     *   Class Constructor
-     *
-     *   @param title The book's title.
-     *   @param author The book's author.
-     *   @param price The book's price.
-     **/
-    // Write your constructor here
+    class MyBook extends Book{
+        private int price;
 
-    /**
-     *   Method Name: display
-     *
-     *   Print the title, author, and price in the specified format.
-     **/
-    // Write your method here
 
-// End class
+        /**
+         *   Class Constructor
+         *
+         *   @param title The book's title.
+         *   @param author The book's author.
+         *   @param price The book's price.
+         **/
+
+        public MyBook(String title, String author, int price) {
+            super(title, author);
+            this.price = price;
+        }
+
+
+        /**
+         *
+         *   Print the title, author, and price in the specified format.
+         **/
+        @Override
+        void display() {
+            System.out.println("Title: " + this.title);
+            System.out.println("Author: " + this.author);
+            System.out.println("Price: " + this.price);
+        }
+    }
+
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
