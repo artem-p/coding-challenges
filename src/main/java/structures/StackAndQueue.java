@@ -1,23 +1,35 @@
 package main.java.structures;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
  * https://hackerrank.com/challenges/30-queues-stacks/problem
  * */
 public class StackAndQueue {
-    private char dequeueCharacter() {
-        return 0;
-    }
+    private List<Character> stack = new ArrayList<>();
+    private List<Character> queue = new ArrayList<>();
 
-    private char popCharacter() {
-        return 0;
+    private int stackTop = -1;  // index of stack's top element
+    private int queueFront = 0;  // index of queue's end element
+    private int queueRear = -1;
+
+
+    private void pushCharacter(char character) {
+        stack.add(++stackTop, character);
     }
 
     private void enqueueCharacter(char character) {
+        queue.add(++queueRear, character);
     }
 
-    private void pushCharacter(char character) {
+    private char popCharacter() {
+        return stack.get(stackTop--);
+    }
+
+    private char dequeueCharacter() {
+        return queue.get(queueFront++);
     }
 
 
