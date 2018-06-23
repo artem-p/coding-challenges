@@ -1,4 +1,4 @@
-package src.main.java;
+package main.java.sort;
 
 import java.util.Scanner;
 
